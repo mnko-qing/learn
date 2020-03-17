@@ -1,9 +1,21 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [ 
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "问道"
+			}
+		},
+		{
+			"path": "pages/view/view",
+			"style": {
+				"navigationBarTitleText": "发现"
+			}
+		},
+		{
+			"path": "pages/person/person",
+			"style": {
+				"navigationBarTitleText": "个人中心"
 			}
 		}
 	],
@@ -12,5 +24,27 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+	  "borderStyle": "black",
+	  "backgroundColor": "#fff",
+	  "color": "#8F8F94",
+	  "selectedColor": "#f33e54",
+	  "list": [{
+	    "pagePath": "pages/index/index",
+	    "iconPath": "static/tabBar/home.png",
+	    "selectedIconPath": "static/tabBar/home_active.png",
+	    "text": "首页"
+	  }, {
+	    "pagePath": "pages/view/view",
+	    "iconPath": "static/tabBar/view.png",
+	    "selectedIconPath": "static/tabBar/view_active.png",
+	    "text": "发现"
+		}, {
+	    "pagePath": "pages/person/person",
+	    "iconPath": "static/tabBar/me.png",
+	    "selectedIconPath": "static/tabBar/me_active.png",
+	    "text": "个人中心"
+		}]
 	}
 }
