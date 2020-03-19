@@ -13,5 +13,10 @@
 </script>
 
 <style>
-	/*每个页面公共css */
+	page {
+		background-color: #e5e5e5;
+	}
+	.margin_bottom_10 {
+		margin-bottom: 10px;
+	}
 </style>

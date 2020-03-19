@@ -1,12 +1,6 @@
-page {
-  background-color: #e5e5e5;
-}
 page .right {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABQklEQVR4Xu3a0Q2CQBAE0CV0o/3YCHVcI/aj3ZCY+yAhRj/IsjvD7fgtkHk3qzlgsuKfqXh+E4AaUFxAI1C8APoR1AhoBIoLaASKF0D/AhqBjBFYluXWWntnXOvoNcIb0MOv6/qc5/nBiBAKsIU3s7uZvRgRwgC+wm/NpEPIBugQVAhhAD3pnxZQIYQCXAEhHIAdIQWAGSENgBUhFYARIR2ADQECwIQAA2BBgAIwIMAB0AgUAEgEARy9gxLxfeSmCd4AZPi+mFAAdHgoAEN4GABLeAgAU/h0ALbwqQCM4dMAWMOnADCHDwdgDx8KcIXwCACqp0KhAD+2uHThwwH2CIxPhlMANgTGdwPSACLuIZx1Tuh2+KwQnvMIwKM3wrFqwAir6MmgBnj0RjhWDRhhFT0Z1ACP3gjHqgEjrKInQ/kGfAD15CZQ+AOf4gAAAABJRU5ErkJggg==);
   background-size: 100% 100%;
-}
-page .margin_bottom_10 {
-  margin-bottom: 10px;
 }
 page .person > view {
   background-color: #fff;
@@ -63,6 +57,35 @@ page .person_user .right_arrow {
   height: 22px;
 }
 page .person_content {
-  height: 200px;
+  background-color: #e5e5e5 !important;
+}
+page .person_content > view {
+  background-color: #fff;
+}
+page .person_content .person_content_item {
+  height: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  border-bottom: 1px solid #eae7e7;
+  padding-right: 15px;
+  margin-left: 60px;
+}
+page .person_content .person_content_item .person_icon {
+  width: 30px;
+  height: 30px;
+  margin-left: -45px;
+}
+page .person_content .person_content_item .person_icon_text {
+  font-size: 16px;
+  padding-left: 10px;
+}
+page .person_content .person_content_item .right {
+  width: 26px;
+  height: 26px;
+  margin-left: auto;
 }
 
