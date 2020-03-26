@@ -154,7 +154,7 @@
 	}
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 	.home {
 		& > view {
 			background-color: #fff;
@@ -192,7 +192,7 @@
 			}
 		}
 		swiper {
-			height: 220px;
+			height: 400rpx;
 			width: 100%;
 			image {
 				width: 100%;

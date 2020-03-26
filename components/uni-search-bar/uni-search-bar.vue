@@ -16,7 +16,11 @@
 				<uni-icons color="#999999" class="" size="24" type="clear" />
 			</view>
 		</view>
+<<<<<<< HEAD
 		<text @click="cancel" class="uni-searchbar__cancel" v-if="cancelButton ==='always' || show && cancelButton ==='auto'">{{cancelText}}</text>
+=======
+		<!-- <text @click="cancel" class="uni-searchbar__cancel" v-if="cancelButton ==='always' || show && cancelButton ==='auto'">{{cancelText}}</text> -->
+>>>>>>> f1993dfe104668fceab01e675a079f0481defb02
 	</view>
 </template>
 

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "pages": [
     "pages/index/index",
     "pages/view/view",
@@ -38,4 +39,46 @@
     ]
   },
   "usingComponents": {}
+=======
+	"pages": [
+		"pages/index/index",
+		"pages/view/view",
+		"pages/person/person"
+	],
+	"subPackages": [],
+	"window": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"borderStyle": "black",
+		"backgroundColor": "#fff",
+		"color": "#8F8F94",
+		"selectedColor": "#f33e54",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabBar/home.png",
+				"selectedIconPath": "static/tabBar/home_active.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/view/view",
+				"iconPath": "static/tabBar/view.png",
+				"selectedIconPath": "static/tabBar/view_active.png",
+				"text": "发现"
+			},
+			{
+				"pagePath": "pages/person/person",
+				"iconPath": "static/tabBar/me.png",
+				"selectedIconPath": "static/tabBar/me_active.png",
+				"text": "个人中心"
+			}
+		]
+	},
+	"usingComponents": {},
+	"sitemapLocation": "sitemap86.json"
+>>>>>>> f1993dfe104668fceab01e675a079f0481defb02
 }
