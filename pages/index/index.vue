@@ -82,7 +82,7 @@
 	}
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 	.home {
 		& > view {
 			background-color: #fff;

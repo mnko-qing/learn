@@ -1,7 +1,7 @@
-.home > view {
+.home > view.data-v-62f5088c {
   background-color: #fff;
 }
-.home .home_header {
+.home .home_header.data-v-62f5088c {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -12,18 +12,18 @@
   padding: 5px 15px;
   font-size: 16px;
 }
-.home .home_header .title {
+.home .home_header .title.data-v-62f5088c {
   padding-left: 15px;
 }
-.home .home_header .title text:last-child {
+.home .home_header .title text.data-v-62f5088c:last-child {
   font-size: 14px;
   color: #8b8a8f;
 }
-.home .home_header image {
+.home .home_header image.data-v-62f5088c {
   width: 40px;
   height: 40px;
 }
-.home .home_header .attention {
+.home .home_header .attention.data-v-62f5088c {
   margin-left: auto;
   border: 1px solid #f33e54;
   color: #f33e54;
@@ -33,19 +33,61 @@
   text-align: center;
   border-radius: 50px;
 }
-.home .home_header .attentioned {
+.home .home_header .attentioned.data-v-62f5088c {
   border: 1px solid #7a7070;
   color: #7a7070;
 }
-.home swiper {
-  height: 240px;
+.home swiper.data-v-62f5088c {
+  height: 220px;
   width: 100%;
 }
-.home swiper image {
+.home swiper image.data-v-62f5088c {
   width: 100%;
   height: 100%;
 }
-.home .category {
-  height: 200px;
+.home .category.data-v-62f5088c {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.home .category .category_item.data-v-62f5088c {
+  width: 25%;
+  padding-top: 15px;
+}
+.home .category .category_item view.data-v-62f5088c {
+  font-size: 14px;
+  width: 100%;
+  text-align: center;
+  line-height: 3;
+}
+.home .category .category_item button.data-v-62f5088c {
+  width: 60px;
+  height: 55px;
+  border-radius: 12px;
+  box-shadow: 0 3px 1px 0px #eee9e9;
+}
+.home .category .category_item button image.data-v-62f5088c {
+  width: 50px;
+  height: 50px;
+  margin-left: -8px;
+}
+.home .category .category_item button.data-v-62f5088c::after {
+  border: none;
+}
+.home .list.data-v-62f5088c {
+  padding: 15px;
+}
+.home .list image.data-v-62f5088c {
+  height: 120px;
+  width: 100%;
+  border-radius: 4px;
 }
 
