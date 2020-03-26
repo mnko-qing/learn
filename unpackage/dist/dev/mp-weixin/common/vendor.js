@@ -7611,9 +7611,9 @@ module.exports = g;
 
 /***/ }),
 /* 4 */
-/*!*************************************************!*\
-  !*** C:/Users/mnko_qing/Desktop/uni/pages.json ***!
-  \*************************************************/
+/*!*********************************************!*\
+  !*** C:/Users/30103/Desktop/uni/pages.json ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8518,9 +8518,9 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 
 /***/ }),
 /* 7 */
-/*!******************************************************************!*\
-  !*** C:/Users/mnko_qing/Desktop/uni/pages.json?{"type":"style"} ***!
-  \******************************************************************/
+/*!**************************************************************!*\
+  !*** C:/Users/30103/Desktop/uni/pages.json?{"type":"style"} ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8529,9 +8529,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 /* 8 */
-/*!*****************************************************************!*\
-  !*** C:/Users/mnko_qing/Desktop/uni/pages.json?{"type":"stat"} ***!
-  \*****************************************************************/
+/*!*************************************************************!*\
+  !*** C:/Users/30103/Desktop/uni/pages.json?{"type":"stat"} ***!
+  \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

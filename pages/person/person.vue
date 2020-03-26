@@ -115,7 +115,6 @@
 			  provider: 'weixin',
 			  success: res => {
 			    this.userInfo = res.userInfo
-					console.log(res)
 			  }
 			})
 		},
