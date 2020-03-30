@@ -192,13 +192,20 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
     return {
       isShowFilters: false,
       filterCategory: ['全部', '课程', '活动', '商品', '社群'],
-      filterRange: ['0-50', '50-100', '100-200'] };
+      filterArea: ['0-50', '50-100', '100-200'] };
 
   },
   onLoad: function onLoad() {
@@ -212,6 +219,12 @@ var _default =
 
     },
     filters: function filters() {
+
+    },
+    reset: function reset() {
+
+    },
+    confirm: function confirm() {
 
     } } };exports.default = _default;
 

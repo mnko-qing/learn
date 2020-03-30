@@ -27,15 +27,15 @@
 			</swiper-item>
 		</swiper>
 		<view class="category margin_bottom_10">
-			<view 
-				class="category_item" 
-				v-for="(item,index) in categorys"
-				:key="index">
-				<button>
-					<image :src="'/static/category/' + item.imageName + '.png'"></image>
-				</button>
-				<view>{{item.text}}</view>
-			</view>
+      <view 
+        class="category_item"
+        v-for="(item,index) in categorys"
+        :key="index">
+        <view>
+          <image :src="'/static/category/' + item.imageName + '.png'"></image>
+        </view>
+        <text>{{item.text}}</text>
+      </view>
 		</view>
 		<view class="list">
       <view class="margin_bottom_10" v-for="(item,index) in list" :key="index">
@@ -200,34 +200,36 @@
 			}
 		}
 		.category {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-wrap: wrap;
-			.category_item{
-				width: 25%;
-				padding-top: 15px;
-				view {
-					font-size: 14px;
-					width: 100%;
-					text-align: center;
-					line-height: 3;
-				}
-				button {
-					width: 60px;
-					height: 55px;
-					border-radius: 12px;
-					box-shadow: 0 3px 1px 0px #eee9e9;
-					image {
-						width: 50px;
-						height: 50px;
-						margin-left: -8px;
-					}
-					&::after {
-						border: none;
-					}
-				}
-			}
+			display: grid;
+      padding: 15px;
+      grid-gap: 20rpx;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      .category_item {
+        padding: 20rpx;
+        height: 150rpx;
+        & > view {
+          height: 100rpx;
+          border-radius: 12px;
+          border: 1px solid #C0C0C0;
+          box-shadow: 0 3px 1px 0px #eee9e9;
+          display: flex;
+          justify-content: center;
+          align-items:center;
+        }
+        image {
+        	width: 80rpx;
+        	height: 80rpx;
+        }
+        text {
+          color: #555456;
+          font-size: 26rpx;
+          text-align: center;
+          display: block;
+          width: 100%;
+          padding-top: 10px;
+        }
+      }
 		}
 		.list {
       background-color: #e5e5e5;
@@ -265,7 +267,7 @@
           font-size: 14px;
         }
         .list_item_title {
-          font-size: 18px;
+          font-size: 16px;
           padding: 10px 0;
           width: 100%;
           overflow: hidden;
