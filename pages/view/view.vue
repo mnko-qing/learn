@@ -22,15 +22,18 @@
 				mode="right"
 				@close="isShowFilters = false"
 				:visible="isShowFilters">
-			  <view style="padding: 30rpx;">
+			  <view>
 			    <view class="title">类型</view>
 					<view class="drawer_category">
-						<text v-for="(item,index) in filterCategory" 
-						:key="index">{{item.text}}</text>
+						<text v-for="item in filterCategory" :key="item">
+              {{item}}
+            </text>
 					</view>		
 					<view class="title">价格区间</view>
 					<view class="drawer_category">
-						
+						<text v-for="item in filterRange" :key="item">
+						  {{item}}
+						</text>
 					</view>
 			  </view>
 			</uni-drawer>
@@ -43,16 +46,8 @@
 		data() {
 			return {
 				isShowFilters: false,
-				filterCategory: [
-					{text: '全部', type: 1},
-					{text: '课程', type: 1},
-					{text: '活动', type: 1},
-					{text: '商品', type: 1},
-					{text: '社群', type: 1},
-					{text: '0-50', type: 2},
-					{text: '50-100', type: 2},
-					{text: '100-200', type: 2},
-				],
+				filterCategory: ['全部', '课程', '活动', '商品','社群'],
+        filterRange:['0-50', '50-100', '100-200']
 			}
 		},
 		onLoad() {
@@ -117,8 +112,11 @@
 				}
 			}
 			.uni-drawer,uni-drawer {
+        & > view {
+          padding: 30rpx;
+        }
 				.title {
-					padding: 20rpx 0;
+					padding-bottom: 20rpx;
 					font-size: 18px;
 				}
 				.drawer_category {
@@ -128,7 +126,7 @@
 						background-color: #f0edec;
 						color: #767676;
 						text-align: center;
-						width: 120rpx;
+						width: 150rpx;
 						height: 60rpx;
 						line-height: 60rpx;
 						border-radius: 50rpx;

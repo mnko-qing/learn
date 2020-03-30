@@ -24,10 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.margin_bottom_15.data-v-1bba1f14 {
+.margin_bottom_15.data-v-523c1921 {
   margin-bottom: 15px;
 }
-.uni-drawer.data-v-1bba1f14 {
+.uni-drawer.data-v-523c1921 {
   display: block;
   position: fixed;
   top: 0;
@@ -37,7 +37,7 @@
   overflow: hidden;
   z-index: 99999;
 }
-.uni-drawer__content.data-v-1bba1f14 {
+.uni-drawer__content.data-v-523c1921 {
   display: block;
   position: absolute;
   top: 0;
@@ -49,21 +49,21 @@
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
-.uni-drawer--left.data-v-1bba1f14 {
+.uni-drawer--left.data-v-523c1921 {
   left: 0;
   -webkit-transform: translateX(-500rpx);
           transform: translateX(-500rpx);
 }
-.uni-drawer--right.data-v-1bba1f14 {
+.uni-drawer--right.data-v-523c1921 {
   right: 0;
   -webkit-transform: translateX(500rpx);
           transform: translateX(500rpx);
 }
-.uni-drawer__content--visible.data-v-1bba1f14 {
+.uni-drawer__content--visible.data-v-523c1921 {
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
 }
-.uni-drawer__mask.data-v-1bba1f14 {
+.uni-drawer__mask.data-v-523c1921 {
   display: block;
   opacity: 0;
   position: absolute;
@@ -75,7 +75,7 @@
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
-.uni-drawer__mask--visible.data-v-1bba1f14 {
+.uni-drawer__mask--visible.data-v-523c1921 {
   display: block;
   opacity: 1;
 }

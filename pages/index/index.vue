@@ -44,7 +44,7 @@
           class="list_item" 
           :class="{'margin_bottom_10': subIndex === item.list - 1}"
           v-for="(sub, subIndex) in item.list" 
-          :key="index + subIndex">
+          :key="sub.studyNum">
           <image :src="sub.image"></image>
           <text v-if="sub.type == 'text'">图文</text>
           <text v-else-if="sub.type == 'audio'">音频</text>
