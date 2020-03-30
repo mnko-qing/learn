@@ -1,23 +1,52 @@
-page .right {
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.margin_bottom_15.data-v-85af7518 {
+  margin-bottom: 15px;
+}
+page .right.data-v-85af7518 {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABQklEQVR4Xu3a0Q2CQBAE0CV0o/3YCHVcI/aj3ZCY+yAhRj/IsjvD7fgtkHk3qzlgsuKfqXh+E4AaUFxAI1C8APoR1AhoBIoLaASKF0D/AhqBjBFYluXWWntnXOvoNcIb0MOv6/qc5/nBiBAKsIU3s7uZvRgRwgC+wm/NpEPIBugQVAhhAD3pnxZQIYQCXAEhHIAdIQWAGSENgBUhFYARIR2ADQECwIQAA2BBgAIwIMAB0AgUAEgEARy9gxLxfeSmCd4AZPi+mFAAdHgoAEN4GABLeAgAU/h0ALbwqQCM4dMAWMOnADCHDwdgDx8KcIXwCACqp0KhAD+2uHThwwH2CIxPhlMANgTGdwPSACLuIZx1Tuh2+KwQnvMIwKM3wrFqwAir6MmgBnj0RjhWDRhhFT0Z1ACP3gjHqgEjrKInQ/kGfAD15CZQ+AOf4gAAAABJRU5ErkJggg==);
   background-size: 100% 100%;
 }
-page .person > view {
+page .person > view.data-v-85af7518 {
   background-color: #fff;
 }
-page .person_head {
+page .person_head.data-v-85af7518 {
   height: 40px;
   padding: 0 15px;
 }
-page .person_head image {
-  width: 25px;
-  height: 25px;
-  margin-top: 5px;
+page .person_head image.data-v-85af7518 {
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
 }
-page .person_head image:last-child {
-  float: right;
+page .person_head image.data-v-85af7518:last-child {
+    float: right;
 }
-page .person_user {
+page .person_user.data-v-85af7518 {
   height: 180px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -34,58 +63,35 @@ page .person_user {
           align-items: center;
   position: relative;
 }
-page .person_user .avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+page .person_user .avatar.data-v-85af7518 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
-page .person_user text {
-  margin: 10px 0;
-  font-size: 20px;
-  font-weight: 600;
-  color: black;
+page .person_user text.data-v-85af7518 {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
 }
-page .person_user .note {
-  font-size: 14px;
-  color: #adadad;
+page .person_user .note.data-v-85af7518 {
+    font-size: 14px;
+    color: #adadad;
 }
-page .person_user .right_arrow {
-  position: absolute;
-  right: 15px;
-  top: 50px;
-  width: 22px;
-  height: 22px;
+page .person_user .right_arrow.data-v-85af7518 {
+    position: absolute;
+    right: 15px;
+    top: 50px;
+    width: 22px;
+    height: 22px;
 }
-page .person_content {
-  background-color: #e5e5e5 !important;
+page uni-list.data-v-85af7518 .uni-list {
+  background-color: #e5e5e5;
 }
-page .person_content > view {
-  background-color: #fff;
+page uni-list.data-v-85af7518 .uni-list .uni-list-item {
+    background-color: #fff;
 }
-page .person_content .person_content_item {
-  height: 50px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  border-bottom: 1px solid #eae7e7;
-  padding-right: 15px;
-  margin-left: 60px;
-}
-page .person_content .person_content_item .person_icon {
-  width: 30px;
-  height: 30px;
-  margin-left: -45px;
-}
-page .person_content .person_content_item .person_icon_text {
-  font-size: 16px;
-  padding-left: 10px;
-}
-page .person_content .person_content_item .right {
-  width: 26px;
-  height: 26px;
-  margin-left: auto;
+page uni-list.data-v-85af7518 .uni-list .uni-list-item--hover {
+    background-color: #f1f1f1 !important;
 }
 

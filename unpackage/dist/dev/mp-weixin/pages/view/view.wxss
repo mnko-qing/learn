@@ -58,26 +58,67 @@ page .search_filter_area .filter_area image {
 }
 page .search_filter_area .uni-drawer .title,
 page .search_filter_area uni-drawer .title {
-  padding: 20rpx 0;
+  margin: 20rpx 0;
   font-size: 18px;
+}
+page .search_filter_area .uni-drawer .divide-line,
+page .search_filter_area uni-drawer .divide-line {
+  width: 100%;
+  height: 1px;
+  background-color: #C8C7CC;
+  margin: 20px 0;
 }
 page .search_filter_area .uni-drawer .drawer_category,
 page .search_filter_area uni-drawer .drawer_category {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-          flex-wrap: wrap;
+  display: grid;
+  text-align: center;
+  grid-gap: 20rpx;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
-page .search_filter_area .uni-drawer .drawer_category > text,
-page .search_filter_area uni-drawer .drawer_category > text {
+page .search_filter_area .uni-drawer .drawer_category > view,
+page .search_filter_area uni-drawer .drawer_category > view {
   background-color: #f0edec;
   color: #767676;
-  text-align: center;
-  width: 120rpx;
   height: 60rpx;
   line-height: 60rpx;
   border-radius: 50rpx;
-  margin: 0 10px 10px 0;
+}
+page .search_filter_area .uni-drawer .drawer_category .input_area,
+page .search_filter_area uni-drawer .drawer_category .input_area {
+  grid-column-start: span 3;
+  background-color: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+page .search_filter_area .uni-drawer .drawer_button,
+page .search_filter_area uni-drawer .drawer_button {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  right: 30rpx;
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  overflow: hidden;
+}
+page .search_filter_area .uni-drawer .drawer_button > view,
+page .search_filter_area uni-drawer .drawer_button > view {
+  width: 140rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+page .search_filter_area .uni-drawer .drawer_button > view:first-child,
+page .search_filter_area uni-drawer .drawer_button > view:first-child {
+  border: 1px solid #f39b1f;
+  background-color: #f39b1f;
+}
+page .search_filter_area .uni-drawer .drawer_button > view:last-child,
+page .search_filter_area uni-drawer .drawer_button > view:last-child {
+  border: 1px solid #f33e54;
+  background-color: #f33e54;
 }
 

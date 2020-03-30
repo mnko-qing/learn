@@ -22,15 +22,25 @@
 				mode="right"
 				@close="isShowFilters = false"
 				:visible="isShowFilters">
-			  <view style="padding: 30rpx;">
+			  <view style="padding: 20rpx;">
 			    <view class="title">类型</view>
 					<view class="drawer_category">
-						<text v-for="(item,index) in filterCategory" 
-						:key="index">{{item.text}}</text>
-					</view>		
+						<view v-for="item in filterCategory" :key="item">{{item}}</view>
+					</view>	
+					<view class="divide-line"></view>
 					<view class="title">价格区间</view>
 					<view class="drawer_category">
-						
+						<view class="input_area">
+							<input class="uni-input" type="number" placeholder="最低价" />
+							-
+							<input class="uni-input" type="number" placeholder="最高价" />
+						</view>
+						<view v-for="item in filterArea" :key="item">{{item}}</view>
+					</view>
+					<view class="divide-line"></view>
+					<view class="drawer_button">
+						<view @click="reset">重置</view>
+						<view @click="confirm">确定</view>
 					</view>
 			  </view>
 			</uni-drawer>
@@ -43,16 +53,8 @@
 		data() {
 			return {
 				isShowFilters: false,
-				filterCategory: [
-					{text: '全部', type: 1},
-					{text: '课程', type: 1},
-					{text: '活动', type: 1},
-					{text: '商品', type: 1},
-					{text: '社群', type: 1},
-					{text: '0-50', type: 2},
-					{text: '50-100', type: 2},
-					{text: '100-200', type: 2},
-				],
+				filterCategory: ['全部', '课程', '活动', '商品', '社群'],
+				filterArea: ['0-50', '50-100', '100-200']
 			}
 		},
 		onLoad() {
@@ -66,6 +68,12 @@
 				
 			},
 			filters() {
+				
+			},
+			reset() {
+				
+			},
+			confirm() {
 				
 			}
 		}
@@ -118,21 +126,55 @@
 			}
 			.uni-drawer,uni-drawer {
 				.title {
-					padding: 20rpx 0;
+					margin: 20rpx 0;
 					font-size: 18px;
 				}
+				.divide-line {
+					width: 100%;
+					height: 1px;
+					background-color: #C8C7CC;
+					margin: 20px 0;
+				}
 				.drawer_category {
-					display: flex;
-					flex-wrap: wrap;
-					& > text {
+					display: grid;
+					text-align: center;
+					grid-gap: 20rpx;
+					grid-template-columns: repeat(3, 1fr);
+					grid-template-rows: repeat(2, 1fr);
+					& > view {
 						background-color: #f0edec;
 						color: #767676;
-						text-align: center;
-						width: 120rpx;
 						height: 60rpx;
 						line-height: 60rpx;
 						border-radius: 50rpx;
-						margin: 0 10px 10px 0;
+					}
+					.input_area {
+						grid-column-start: span 3;
+						background-color: none;
+						display: flex;
+					}
+				}
+				.drawer_button {
+					color: #fff;
+					position: absolute;
+					bottom: 20px;
+					right: 30rpx;
+					border-radius: 50px;
+					display: flex;
+					overflow: hidden;
+					& > view {
+						width: 140rpx;
+						height: 60rpx;
+						text-align: center;
+						line-height: 60rpx;
+						&:first-child {
+							border: 1px solid #f39b1f;
+							background-color: #f39b1f;
+						}
+						&:last-child {
+							border: 1px solid #f33e54;
+							background-color: #f33e54;
+						}
 					}
 				}
 			}
