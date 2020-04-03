@@ -9,13 +9,23 @@
 					@tap="switchCategory(index)"
 					:class="[currentIndex == index ? 'left_nav_bar_active':'']">
 			  	{{leftNav}}
-			  </view>  
+			  </view>   
 			</scroll-view>
-			<block v-for="(leftNav,index) in leftNavList" :key='leftNav'>
-				<scroll-view scroll-y>
-				    
+			
+			<view class="right_content">
+				<scroll-view scroll-y scroll-with-animation>
+					<view>{{currentIndex}}</view>
+					<view>{{currentIndex}}</view>
+					<view>{{currentIndex}}</view>
+					<view>{{currentIndex}}</view>
+					<view>{{currentIndex}}</view>
+					<view>{{currentIndex}}</view>
+					<view>{{currentIndex}}</view>
+					<view>{{currentIndex}}</view>
+					<view>{{currentIndex}}</view>
+					<view>{{currentIndex}}</view>
 				</scroll-view>
-			</block>
+			</view>
 		</view>
 	</view>
 </template>
@@ -43,6 +53,7 @@
 					'电脑办公',
 				],
 				currentIndex: 0,
+				currentCategoryData: [], 
 			}
 		},
 		methods: {
@@ -50,7 +61,11 @@
 				if(this.currentIndex !== index) {
 					this.currentIndex = index
 					// 切换右侧分类
+					this.requestCategoryData()
 				}
+			},
+			requestCategoryData() {
+				
 			}
 		}
 	}
@@ -60,30 +75,34 @@
 	.category {
 		width: 100%;
 		height: 100%;
+		scroll-view {
+			height: 100%;
+			::-webkit-scrollbar {
+				display: none;
+			}
+		}
+		
 		.category_content {
 			width: 100%;
 			height: calc(~'100% - 54px');
-			// border-top: 1px solid #E0E0E0;
 			display: flex;
-			scroll-view {
-				height: 100%;
-				::-webkit-scrollbar {
-					/* 隐藏滚动条，但依旧具备可以滚动的功能 */
-					display: none
+			& > scroll-view {
+				width: 240rpx;
+				background-color: #f6f6f6;
+				view {
+					width: 100%;
+					text-align: center;
+					height: 80rpx;
+					line-height: 80rpx;
 				}
-				&:first-child {
-					width: 240rpx;
-					background-color: #f6f6f6;
-					view {
-						width: 100%;
-						text-align: center;
-						height: 80rpx;
-						line-height: 80rpx;
-					}
-				}
-				&:last-child {
-					flex: 1;
-					background-color: #ffffff;
+			}
+			.right_content {
+				flex: 1;
+				overflow: hidden;
+				background-color: #ffffff;
+				view {
+					height: 20%;
+					margin: 0 auto;
 				}
 			}
 			.left_nav_bar_active {

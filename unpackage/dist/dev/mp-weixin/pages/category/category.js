@@ -156,6 +156,16 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default =
 {
   data: function data() {
@@ -178,7 +188,8 @@ var _default =
       '钟表珠宝',
       '电脑办公'],
 
-      currentIndex: 0 };
+      currentIndex: 0,
+      currentCategoryData: [] };
 
   },
   methods: {
@@ -186,7 +197,11 @@ var _default =
       if (this.currentIndex !== index) {
         this.currentIndex = index;
         // 切换右侧分类
+        this.requestCategoryData();
       }
+    },
+    requestCategoryData: function requestCategoryData() {
+
     } } };exports.default = _default;
 
 /***/ }),

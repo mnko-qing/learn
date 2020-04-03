@@ -2,6 +2,12 @@
   width: 100%;
   height: 100%;
 }
+.category scroll-view.data-v-253ade94 {
+  height: 100%;
+}
+.category scroll-view.data-v-253ade94 ::-webkit-scrollbar {
+  display: none;
+}
 .category .category_content.data-v-253ade94 {
   width: 100%;
   height: calc(100% - 54px);
@@ -9,28 +15,26 @@
   display: -webkit-flex;
   display: flex;
 }
-.category .category_content scroll-view.data-v-253ade94 {
-  height: 100%;
-}
-.category .category_content scroll-view.data-v-253ade94 ::-webkit-scrollbar {
-  /* 隐藏滚动条，但依旧具备可以滚动的功能 */
-  display: none;
-}
-.category .category_content scroll-view.data-v-253ade94:first-child {
+.category .category_content > scroll-view.data-v-253ade94 {
   width: 240rpx;
   background-color: #f6f6f6;
 }
-.category .category_content scroll-view:first-child view.data-v-253ade94 {
+.category .category_content > scroll-view view.data-v-253ade94 {
   width: 100%;
   text-align: center;
   height: 80rpx;
   line-height: 80rpx;
 }
-.category .category_content scroll-view.data-v-253ade94:last-child {
+.category .category_content .right_content.data-v-253ade94 {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;
+  overflow: hidden;
   background-color: #ffffff;
+}
+.category .category_content .right_content view.data-v-253ade94 {
+  height: 20%;
+  margin: 0 auto;
 }
 .category .category_content .left_nav_bar_active.data-v-253ade94 {
   position: relative;
