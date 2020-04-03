@@ -1,5 +1,4 @@
 page {
-  padding-top: 10px;
   background-color: #fff;
 }
 page .search_filter_area {
@@ -12,6 +11,12 @@ page .search_filter_area .search_area {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
 }
 page .search_filter_area .search_area .uni-searchbar,
 page .search_filter_area .search_area uni-search-bar {
@@ -20,28 +25,25 @@ page .search_filter_area .search_area uni-search-bar {
           flex: 1;
 }
 page .search_filter_area .search_area > text {
-  color: #f08a31;
-  margin-left: auto;
-  line-height: 36px;
   width: 52px;
+  color: #f08a31;
   text-align: center;
 }
 page .search_filter_area .filter_area {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  padding: 15px 0;
   font-size: 14px;
+  height: 80rpx;
 }
 page .search_filter_area .filter_area > view {
   color: #707072;
-  width: 25%;
-  text-align: center;
-}
-page .search_filter_area .filter_area > view:last-child {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
           justify-content: center;
@@ -49,8 +51,25 @@ page .search_filter_area .filter_area > view:last-child {
   -webkit-align-items: center;
           align-items: center;
 }
-page .search_filter_area .filter_area uni-icons {
-  color: #707072;
+page .search_filter_area .filter_area > view > view {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+page .search_filter_area .filter_area .filter_type_active {
+  color: #f39b1f;
 }
 page .search_filter_area .filter_area image {
   width: 16px;
@@ -83,6 +102,7 @@ page .search_filter_area uni-drawer .drawer_category {
 page .search_filter_area .uni-drawer .drawer_category > view,
 page .search_filter_area uni-drawer .drawer_category > view {
   background-color: #f0edec;
+  border: 1px solid #f0edec;
   color: #767676;
   height: 60rpx;
   line-height: 60rpx;
@@ -130,5 +150,11 @@ page .search_filter_area .uni-drawer .drawer_button > view:last-child,
 page .search_filter_area uni-drawer .drawer_button > view:last-child {
   border: 1px solid #f33e54;
   background-color: #f33e54;
+}
+page .search_filter_area .uni-drawer .drawer_type_active,
+page .search_filter_area uni-drawer .drawer_type_active {
+  color: #fff !important;
+  border: 1px solid #f39b1f !important;
+  background-color: #feb50b !important;
 }
 

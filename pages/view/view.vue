@@ -7,11 +7,39 @@
 				<text @click="search">搜索</text>
 			</view>
 			<view class="filter_area">
-				<view @click="search">
-					人气 <uni-icons type="arrowup"></uni-icons>
+				<view 
+					:class="{'filter_type_active': currentSortType == 1}" 
+					@click="popularitySort">
+					<text>人气</text>
+					<view>
+						<uni-icons
+							type="arrowup"
+							:color="currentSortType ==1 ? '#f39b1f' : '#707072'"
+							v-if="popularitySortType != 2">
+						</uni-icons>
+						<uni-icons 
+							type="arrowdown"
+							:color="currentSortType ==1 ? '#f39b1f' : '#707072'"
+							v-if="popularitySortType != 1">
+						</uni-icons>
+					</view>
 				</view>
-				<view @click="search">
-					价格 <uni-icons type="arrowup"></uni-icons>
+				<view 
+					:class="{'filter_type_active': currentSortType == 2}" 
+					@click="priceSort">
+					<text>价格</text>
+					<view>
+						<uni-icons 
+							type="arrowup" 
+							v-if="priceSortType != 2"
+							:color="currentSortType ==2 ? '#f39b1f' : '#707072'">
+						</uni-icons>
+						<uni-icons 
+							type="arrowdown" 
+							v-if="priceSortType != 1"
+							:color="currentSortType ==2 ? '#f39b1f' : '#707072'">
+						</uni-icons>
+					</view>
 				</view>
 				<view @click="jumpCategory">分类</view>
 				<view @click="isShowFilters = true">
@@ -25,17 +53,37 @@
 			  <view>
 			    <view class="title">类型</view>
 					<view class="drawer_category">
-						<view v-for="item in filterCategory" :key="item">{{item}}</view>
+						<view 
+							@click="setCurrentFilterType(index)"
+							v-for="(item,index) in filterCategory" 
+							:key="item"
+							:class="{'drawer_type_active': currentFilterType == index}">
+							{{item}}
+						</view>
 					</view>	
 					<view class="divide-line"></view>
 					<view class="title">价格区间</view>
 					<view class="drawer_category">
 						<view class="input_area">
-							<input class="uni-input" type="number" placeholder="最低价" />
+							<input 
+								type="number" 
+								@focus="resetFilterPrice" 
+								:value="filterAreaToLow"
+								placeholder="最低价" />
 							-
-							<input class="uni-input" type="number" placeholder="最高价" />
+							<input 
+								type="number" 
+								@focus="resetFilterPrice" 
+								:value="filterAreaToHight"
+								placeholder="最高价" />
 						</view>
-						<view v-for="item in filterArea" :key="item">{{item}}</view>
+						<view 
+							@click="setCurrentFilterPrice(index)"
+							v-for="(item,index) in filterArea" 
+							:key="item"
+							:class="{'drawer_type_active': currentFilterPrice == index}">
+							{{item}}
+						</view>
 					</view>
 					<view class="divide-line"></view>
 					<view class="drawer_button">
@@ -54,7 +102,14 @@
 			return {
 				isShowFilters: false,
 				filterCategory: ['全部', '课程', '活动', '商品', '社群'],
-				filterArea: ['0-50', '50-100', '100-200']
+				filterArea: ['0-50', '50-100', '100-200'],
+				currentFilterType: -1,
+				currentFilterPrice: -1,
+				filterAreaToLow: '',
+				filterAreaToHight: '',
+				popularitySortType: 0, //0 默认 1升序 2降序
+				priceSortType: 0, //0 默认 1升序 2降序
+				currentSortType: 0, //当前排序类型: 1 人气 2价格
 			}
 		},
 		onLoad() {
@@ -65,16 +120,44 @@
 				
 			},
 			jumpCategory() {
-				
+				uni.navigateTo({
+				    url: '../category/category'
+				})
 			},
 			filters() {
 				
 			},
+			popularitySort() {
+				this.currentSortType = 1
+				this.popularitySortType == 2 ? 
+					this.popularitySortType -- :
+					this.popularitySortType ++
+				this.search()
+			},
+			priceSort() {
+				this.currentSortType = 2
+				this.priceSortType == 2 ? 
+					this.priceSortType -- :
+					this.priceSortType ++
+				this.search()
+			},
 			reset() {
-				
+				this.filterAreaToLow = ''
+				this.filterAreaToHight = ''
+				this.currentFilterType = -1
+				this.resetFilterPrice()
+			},
+			resetFilterPrice() {
+				this.currentFilterPrice = -1
 			},
 			confirm() {
-				
+				this.isShowFilters = false
+			},
+			setCurrentFilterType(index) {
+				this.currentFilterType = index
+			},
+			setCurrentFilterPrice(index) {
+				this.currentFilterPrice = index
 			}
 		}
 	}
@@ -82,7 +165,6 @@
 
 <style lang="less">
 	page {
-		padding-top: 10px;
 		background-color: #fff;
 		.search_filter_area {
 			position: fixed;
@@ -91,33 +173,37 @@
 			border-bottom: 1px solid #dcdcdc;
 			.search_area {
 				display: flex;
+				justify-content: center;
+				align-items: center;
 				.uni-searchbar,uni-search-bar {
 					flex: 1;
 				}
 				& > text {
-					color: #f08a31;
-					margin-left: auto;
-					line-height: 36px;
 					width: 52px;
+					color: #f08a31;
 					text-align: center;
 				}
 			}
 			.filter_area {
 				display: flex;
-				padding: 15px 0;
 				font-size: 14px;
+				height: 80rpx;
 				& > view {
 					color: #707072;
-					width: 25%;
-					text-align: center;
-					&:last-child {
+					display: flex;
+					flex: 1;
+					justify-content: center;
+					align-items: center;
+					& > view {
 						display: flex;
+						flex-direction: column;
 						justify-content: center;
 						align-items: center;
+						transform: scale(0.8);
 					}
 				}
-				uni-icons {
-					color: #707072;
+				.filter_type_active {
+					color: #f39b1f;
 				}
 				image {
 					width: 16px;
@@ -146,6 +232,7 @@
 					grid-template-rows: repeat(2, 1fr);
 					& > view {
 						background-color: #f0edec;
+						border: 1px solid #f0edec;
 						color: #767676;
 						height: 60rpx;
 						line-height: 60rpx;
@@ -181,6 +268,11 @@
 							background-color: #f33e54;
 						}
 					}
+				}
+				.drawer_type_active {
+					color: #fff !important;
+					border: 1px solid #f39b1f !important;
+					background-color: #feb50b  !important;
 				}
 			}
 		}

@@ -132,6 +132,9 @@
 			.uni-list-item--hover {
 				background-color: $uni-bg-color-hover !important;
 			}
+			.uni-list-item__content-title {
+				font-size: 30rpx;
+			}
 		}
 	}
 </style>

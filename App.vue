@@ -14,6 +14,8 @@
 
 <style>
 	page {
+		width: 100%;
+		height: 100%;
 		background-color: #e5e5e5;
 	}
 	.margin_bottom_10 {
