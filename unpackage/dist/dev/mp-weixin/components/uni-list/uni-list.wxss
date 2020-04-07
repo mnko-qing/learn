@@ -24,10 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.margin_bottom_15.data-v-0f4346d6 {
+.margin_bottom_15.data-v-71ed05fe {
   margin-bottom: 15px;
 }
-.uni-list.data-v-0f4346d6 {
+.uni-list.data-v-71ed05fe {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -38,10 +38,10 @@
   -webkit-flex-direction: column;
           flex-direction: column;
 }
-.uni-list.data-v-0f4346d6:before {
+.uni-list.data-v-71ed05fe:before {
   height: 0;
 }
-.uni-list.data-v-0f4346d6:after {
+.uni-list.data-v-71ed05fe:after {
   height: 0;
 }
 
