@@ -94,8 +94,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components = {
-  "uni-search-bar": () =>
-    __webpack_require__.e(/*! import() | components/uni-search-bar/uni-search-bar */ "components/uni-search-bar/uni-search-bar").then(__webpack_require__.bind(null, /*! @/components/uni-search-bar/uni-search-bar.vue */ 47))
+  "uni-search-bar": function() {
+    return __webpack_require__.e(/*! import() | components/uni-search-bar/uni-search-bar */ "components/uni-search-bar/uni-search-bar").then(__webpack_require__.bind(null, /*! @/components/uni-search-bar/uni-search-bar.vue */ 47))
+  }
 }
 var render = function() {
   var _vm = this
@@ -134,75 +135,103 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
-{
-  data: function data() {
-    return {
-      leftNavList: [
-      '推荐分类',
-      '极品超市',
-      '国际名牌',
-      '奢侈品',
-      '精品国际',
-      '唯品会',
-      '男装',
-      '女装',
-      '男鞋',
-      '女鞋',
-      '内衣配饰',
-      '箱包手袋',
-      '美妆护肤',
-      '个性清洁',
-      '钟表珠宝',
-      '电脑办公'],
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
-      currentIndex: 0,
-      currentCategoryData: [] };
 
-  },
-  methods: {
-    switchCategory: function switchCategory(index) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _category_config_data = _interopRequireDefault(__webpack_require__(/*! ./category_config_data.js */ 101));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };} //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = { data: function data() {return { leftNavList: ['推荐分类', '极品超市', '国际名牌', '奢侈品', '精品国际', '唯品会', '男装', '女装', '男鞋', '女鞋', '内衣配饰', '箱包手袋', '美妆护肤', '个性清洁', '钟表珠宝', '电脑办公'], scroll: { boxHeight: 0, scrollTop: 0 }, currentIndex: 0, currentCategoryData: {} };}, mounted: function mounted() {var _this = this;var query = uni.createSelectorQuery().in(this);query.select('.category_content').boundingClientRect(function (data) {_this.scroll.boxHeight = data.height;}).exec();this.currentCategoryData = _category_config_data.default[0];console.log(_category_config_data.default);}, methods: { switchCategory: function switchCategory(event, index) {
       if (this.currentIndex !== index) {
         this.currentIndex = index;
-        // 切换右侧分类
+
+        var offsetTop = event.currentTarget.offsetTop;
+        var cellHeight = offsetTop / index;
+
+        var middle = this.scroll.boxHeight / 2;
+        this.scroll.scrollTop = Math.ceil((offsetTop - middle) / cellHeight) * cellHeight;
         this.requestCategoryData();
       }
     },
     requestCategoryData: function requestCategoryData() {
 
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

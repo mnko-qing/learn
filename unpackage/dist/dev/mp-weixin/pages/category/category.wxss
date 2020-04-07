@@ -31,6 +31,15 @@
           flex: 1;
   overflow: hidden;
   background-color: #ffffff;
+  padding-left: 40rpx;
+  padding-right: 20rpx;
+}
+.category .category_content .right_content swiper.data-v-253ade94 {
+  width: 100%;
+  height: 260rpx;
+}
+.category .category_content .right_content .category_banner.data-v-253ade94 {
+  height: 200rpx;
 }
 .category .category_content .right_content view.data-v-253ade94 {
   height: 20%;

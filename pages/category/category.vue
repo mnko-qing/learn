@@ -2,11 +2,15 @@
 	<view class="category">
 		<uni-search-bar :radius="100"></uni-search-bar>
 		<view class="category_content">
-			<scroll-view scroll-y scroll-with-animation enable-back-to-top>
+			<scroll-view 
+				scroll-y 
+				enable-back-to-top
+				scroll-with-animation
+				:scroll-top="scroll.scrollTop">
 			  <view 
 					v-for="(leftNav,index) in leftNavList"
 					:key="leftNav"
-					@tap="switchCategory(index)"
+					@tap="switchCategory($event,index)"
 					:class="[currentIndex == index ? 'left_nav_bar_active':'']">
 			  	{{leftNav}}
 			  </view>   
@@ -14,16 +18,20 @@
 			
 			<view class="right_content">
 				<scroll-view scroll-y scroll-with-animation>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
+					<swiper 
+						:autoplay="true" 
+						:interval="3000" 
+						:duration="1000"
+						v-if="currentCategoryData.swiper">
+						<swiper-item v-for="item in currentCategoryData.swiper" :key="item">
+							<image :src="item"></image>
+						</swiper-item>
+					</swiper>
+					<image 
+						class="category_banner"
+						v-if="currentCategoryData.banner" 
+						:src="currentCategoryData.banner">
+					</image>
 				</scroll-view>
 			</view>
 		</view>
@@ -31,6 +39,7 @@
 </template>
 
 <script>
+	import procducts from './category_config_data.js'
 	export default {
 		data() {
 			return {
@@ -52,15 +61,33 @@
 					'钟表珠宝',
 					'电脑办公',
 				],
+				scroll: {
+					boxHeight: 0,
+					scrollTop: 0,
+				},
 				currentIndex: 0,
-				currentCategoryData: [], 
+				currentCategoryData: {}, 
 			}
 		},
+		mounted() {
+			const query = uni.createSelectorQuery().in(this)
+			query.select('.category_content').boundingClientRect(data => {
+				this.scroll.boxHeight = data.height
+			}).exec()
+			
+			this.currentCategoryData = procducts[0]
+			console.log(procducts)
+		},
 		methods: {
-			switchCategory(index) {
+			switchCategory(event,index) {
 				if(this.currentIndex !== index) {
 					this.currentIndex = index
-					// 切换右侧分类
+					
+					const offsetTop = event.currentTarget.offsetTop
+					const cellHeight = offsetTop / index
+					
+					let middle = this.scroll.boxHeight / 2
+					this.scroll.scrollTop = Math.ceil((offsetTop - middle) / cellHeight) * cellHeight
 					this.requestCategoryData()
 				}
 			},
@@ -100,6 +127,15 @@
 				flex: 1;
 				overflow: hidden;
 				background-color: #ffffff;
+				padding-left: 40rpx;
+				padding-right: 20rpx;
+				swiper {
+					width: 100%;
+					height: 260rpx;
+				}
+				.category_banner {
+					height: 200rpx;
+				}
 				view {
 					height: 20%;
 					margin: 0 auto;
