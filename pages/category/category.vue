@@ -2,28 +2,54 @@
 	<view class="category">
 		<uni-search-bar :radius="100"></uni-search-bar>
 		<view class="category_content">
-			<scroll-view scroll-y scroll-with-animation enable-back-to-top>
+			<scroll-view 
+				scroll-y 
+				enable-back-to-top
+				scroll-with-animation
+				:scroll-top="scroll.scrollTop">
 			  <view 
 					v-for="(leftNav,index) in leftNavList"
 					:key="leftNav"
-					@tap="switchCategory(index)"
+					@tap="switchCategory($event,index)"
 					:class="[currentIndex == index ? 'left_nav_bar_active':'']">
 			  	{{leftNav}}
 			  </view>   
 			</scroll-view>
 			
 			<view class="right_content">
-				<scroll-view scroll-y scroll-with-animation>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
-					<view>{{currentIndex}}</view>
+				<scroll-view 
+          scroll-y 
+          enable-back-to-top
+          scroll-with-animation
+          :scroll-top="scroll.rightScroll">
+					<swiper 
+						:autoplay="true" 
+						:interval="3000" 
+						:duration="1000"
+						v-if="currentCategoryData.swiper">
+						<swiper-item v-for="item in currentCategoryData.swiper" :key="item">
+							<image :src="item"></image>
+						</swiper-item>
+					</swiper>
+					<image 
+						class="category_banner"
+						v-if="currentCategoryData.banner" 
+						:src="currentCategoryData.banner">
+					</image>
+          <view
+            class="category_product"
+            v-for="item in currentCategoryData.sub"
+            :key="item.title">
+            <view class="category_product_title">{{item.title}}</view>
+            <view class="category_product_wrapper">
+              <view 
+                v-for="procduct in item.children"
+                :key="procduct.name">
+                <image :src="procduct.src"></image>
+                <view v-if="procduct.name">{{procduct.name}}</view>
+              </view>
+            </view>
+          </view>
 				</scroll-view>
 			</view>
 		</view>
@@ -31,6 +57,7 @@
 </template>
 
 <script>
+	import procducts from './category_config_data.js'
 	export default {
 		data() {
 			return {
@@ -52,20 +79,45 @@
 					'钟表珠宝',
 					'电脑办公',
 				],
+				scroll: {
+					boxHeight: 0,
+					scrollTop: 0,
+          rightScroll: 0
+				},
 				currentIndex: 0,
-				currentCategoryData: [], 
+				currentCategoryData: {}, 
 			}
 		},
+		mounted() {
+			const query = uni.createSelectorQuery().in(this)
+			query.select('.category_content').boundingClientRect(data => {
+				this.scroll.boxHeight = data.height
+			}).exec()
+			
+			this.currentCategoryData = procducts[0]
+		},
 		methods: {
-			switchCategory(index) {
+			switchCategory(event,index) {
 				if(this.currentIndex !== index) {
 					this.currentIndex = index
-					// 切换右侧分类
-					this.requestCategoryData()
+					
+					const offsetTop = event.currentTarget.offsetTop
+					const cellHeight = offsetTop / index
+					
+					let middle = this.scroll.boxHeight / 2
+					this.scroll.scrollTop = Math.ceil((offsetTop - middle) / cellHeight) * cellHeight
+					this.requestCategoryData(index)
 				}
 			},
-			requestCategoryData() {
-				
+      scrolltoupper() {
+        this.currentCategoryData = procducts[this.currentIndex - 1] || []
+      },
+      scrolltolower() {
+        this.currentCategoryData = procducts[this.currentIndex + 1] || []
+      },
+			requestCategoryData(index) {
+        this.scroll.rightScroll = 0
+				this.currentCategoryData = procducts[index] || []
 			}
 		}
 	}
@@ -94,21 +146,56 @@
 					text-align: center;
 					height: 80rpx;
 					line-height: 80rpx;
+          color: #6b6b6b;
 				}
 			}
 			.right_content {
 				flex: 1;
 				overflow: hidden;
 				background-color: #ffffff;
-				view {
-					height: 20%;
-					margin: 0 auto;
+				padding-left: 40rpx;
+				padding-right: 20rpx;
+				swiper {
+					width: 100%;
+					height: 220rpx;
 				}
+				.category_banner {
+					height: 200rpx;
+				}
+        .category_product {
+          margin-top: 20rpx;
+          width: 100%;
+          .category_product_title {
+            padding: 20rpx 0;
+            font-size: 26rpx;
+            color: #000;
+          }
+          .category_product_wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            margin: 20rpx 0;
+            & > view {
+              height: 160rpx;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              image {
+                height: 100rpx;
+                width: 100rpx;
+              }
+              view {
+                font-size: 24rpx;
+                padding-top: 20rpx;
+              }
+            }
+          }
+        }
 			}
 			.left_nav_bar_active {
+        color: #000;
 				position: relative;
 				background-color: #fff;
-				// font-size: 34rpx;
 				font-weight: 600;
 				&:before {
 					content: '';

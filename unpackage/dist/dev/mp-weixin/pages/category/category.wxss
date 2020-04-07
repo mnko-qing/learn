@@ -24,6 +24,7 @@
   text-align: center;
   height: 80rpx;
   line-height: 80rpx;
+  color: #6b6b6b;
 }
 .category .category_content .right_content.data-v-ce5f8cee {
   -webkit-box-flex: 1;
@@ -31,12 +32,56 @@
           flex: 1;
   overflow: hidden;
   background-color: #ffffff;
+  padding-left: 40rpx;
+  padding-right: 20rpx;
 }
-.category .category_content .right_content view.data-v-ce5f8cee {
-  height: 20%;
-  margin: 0 auto;
+.category .category_content .right_content swiper.data-v-ce5f8cee {
+  width: 100%;
+  height: 220rpx;
+}
+.category .category_content .right_content .category_banner.data-v-ce5f8cee {
+  height: 200rpx;
+}
+.category .category_content .right_content .category_product.data-v-ce5f8cee {
+  margin-top: 20rpx;
+  width: 100%;
+}
+.category .category_content .right_content .category_product .category_product_title.data-v-ce5f8cee {
+  padding: 20rpx 0;
+  font-size: 26rpx;
+  color: #000;
+}
+.category .category_content .right_content .category_product .category_product_wrapper.data-v-ce5f8cee {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 20rpx 0;
+}
+.category .category_content .right_content .category_product .category_product_wrapper > view.data-v-ce5f8cee {
+  height: 160rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.category .category_content .right_content .category_product .category_product_wrapper > view image.data-v-ce5f8cee {
+  height: 100rpx;
+  width: 100rpx;
+}
+.category .category_content .right_content .category_product .category_product_wrapper > view view.data-v-ce5f8cee {
+  font-size: 24rpx;
+  padding-top: 20rpx;
 }
 .category .category_content .left_nav_bar_active.data-v-ce5f8cee {
+  color: #000;
   position: relative;
   background-color: #fff;
   font-weight: 600;

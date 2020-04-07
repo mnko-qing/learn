@@ -7757,6 +7757,217 @@ module.exports = g;
 
 /***/ }),
 
+/***/ 45:
+/*!*************************************************************************!*\
+  !*** C:/Users/30103/Desktop/uni/pages/category/category_config_data.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = [
+{
+  swiper: [
+  '/static/products/1.png',
+  '/static/products/2.png',
+  '/static/products/3.png'],
+
+  sub: [{
+    title: '常用分类',
+    children: [
+    {
+      name: '阴影',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '粉底液/膏',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '卸妆',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: 'BB霜',
+      src: '/static/products/4.png',
+      des: '' },
+    {
+      name: '睫毛膏',
+      src: '/static/products/5.png',
+      des: '' },
+    {
+      name: '眼线笔',
+      src: '/static/products/6.png',
+      des: '' }] },
+
+
+  {
+    title: '专场推荐',
+    children: [
+    {
+      name: '母婴秒杀日',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '建材家装节',
+      src: '/static/products/8.png',
+      des: '' },
+    {
+      name: '以旧换新',
+      src: '/static/products/9.png',
+      des: '' }] },
+
+  {
+    title: '热门分类',
+    children: [
+    {
+      name: '笔记本',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '空调',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '手机',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '服饰',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '零食',
+      src: '/static/products/4.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/4.png',
+  sub: [{
+    title: '休闲零食',
+    children: [
+    {
+      name: '坚果',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '巧克力',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '肉干',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '蛋糕',
+      src: '/static/products/4.png',
+      des: '' },
+    {
+      name: '睫毛膏',
+      src: '/static/products/5.png',
+      des: '' },
+    {
+      name: '膨化食品',
+      src: '/static/products/6.png',
+      des: '' }] },
+
+
+  {
+    title: '中外名酒',
+    children: [
+    {
+      name: '白酒',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '洋酒',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '生鲜',
+    children: [
+    {
+      name: '水果',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '蔬菜',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '速冻食品',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '服饰',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '蛋类',
+      src: '/static/products/4.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/5.png',
+  sub: [{
+    title: '推荐品牌',
+    children: [
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/4.png',
+      des: '' }] },
+
+  {
+    title: '运动户外',
+    children: [
+    {
+      name: '',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '钟表配饰',
+    children: [
+    {
+      name: '',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' }] }] }];exports.default = _default;
+
+/***/ }),
+
 /***/ 5:
 /*!*******************************************************!*\
   !*** ./node_modules/@dcloudio/uni-stat/dist/index.js ***!
@@ -8644,7 +8855,18 @@ main();
 
 /***/ }),
 
-/***/ 59:
+/***/ 6:
+/*!******************************************************!*\
+  !*** ./node_modules/@dcloudio/uni-stat/package.json ***!
+  \******************************************************/
+/*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, bugs, bundleDependencies, deprecated, description, devDependencies, files, gitHead, homepage, license, main, name, repository, scripts, version, default */
+/***/ (function(module) {
+
+module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.0.0-26920200402001","_inBundle":false,"_integrity":"sha512-Mdhd/IRuUMHWPj3TtWrBb0kghRBA0YiO2L2THMFvhCTfQDSoSq1vwOdAx5n/8fIORAvG0uVQoYl73xeVFZML5A==","_location":"/@dcloudio/uni-stat","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"@dcloudio/uni-stat@next","name":"@dcloudio/uni-stat","escapedName":"@dcloudio%2funi-stat","scope":"@dcloudio","rawSpec":"next","saveSpec":null,"fetchSpec":"next"},"_requiredBy":["#USER","/","/@dcloudio/vue-cli-plugin-uni"],"_resolved":"https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-26920200402001.tgz","_shasum":"5f66f5dc252ac00c6064857dee8251ee51aa2391","_spec":"@dcloudio/uni-stat@next","_where":"/Users/guoshengqiang/Documents/dcloud-plugins/release/uniapp-cli","author":"","bugs":{"url":"https://github.com/dcloudio/uni-app/issues"},"bundleDependencies":false,"deprecated":false,"description":"","devDependencies":{"@babel/core":"^7.5.5","@babel/preset-env":"^7.5.5","eslint":"^6.1.0","rollup":"^1.19.3","rollup-plugin-babel":"^4.3.3","rollup-plugin-clear":"^2.0.7","rollup-plugin-commonjs":"^10.0.2","rollup-plugin-copy":"^3.1.0","rollup-plugin-eslint":"^7.0.0","rollup-plugin-json":"^4.0.0","rollup-plugin-node-resolve":"^5.2.0","rollup-plugin-replace":"^2.2.0","rollup-plugin-uglify":"^6.0.2"},"files":["dist","package.json","LICENSE"],"gitHead":"bfdbb7b3000599679ef8cb29a969e6bd447b00c7","homepage":"https://github.com/dcloudio/uni-app#readme","license":"Apache-2.0","main":"dist/index.js","name":"@dcloudio/uni-stat","repository":{"type":"git","url":"git+https://github.com/dcloudio/uni-app.git","directory":"packages/uni-stat"},"scripts":{"build":"NODE_ENV=production rollup -c rollup.config.js","dev":"NODE_ENV=development rollup -w -c rollup.config.js"},"version":"2.0.0-26920200402001"};
+
+/***/ }),
+
+/***/ 60:
 /*!****************************************************************!*\
   !*** C:/Users/30103/Desktop/uni/components/uni-icons/icons.js ***!
   \****************************************************************/
@@ -8877,17 +9099,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 "cloud-download-filled", "\uE8E9"), _defineProperty(_contact$person$perso,
 "headphones", "\uE8BF"), _defineProperty(_contact$person$perso,
 "shop", "\uE609"), _contact$person$perso);exports.default = _default;
-
-/***/ }),
-
-/***/ 6:
-/*!******************************************************!*\
-  !*** ./node_modules/@dcloudio/uni-stat/package.json ***!
-  \******************************************************/
-/*! exports provided: _from, _id, _inBundle, _integrity, _location, _phantomChildren, _requested, _requiredBy, _resolved, _shasum, _spec, _where, author, bugs, bundleDependencies, deprecated, description, devDependencies, files, gitHead, homepage, license, main, name, repository, scripts, version, default */
-/***/ (function(module) {
-
-module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.0.0-26920200402001","_inBundle":false,"_integrity":"sha512-Mdhd/IRuUMHWPj3TtWrBb0kghRBA0YiO2L2THMFvhCTfQDSoSq1vwOdAx5n/8fIORAvG0uVQoYl73xeVFZML5A==","_location":"/@dcloudio/uni-stat","_phantomChildren":{},"_requested":{"type":"tag","registry":true,"raw":"@dcloudio/uni-stat@next","name":"@dcloudio/uni-stat","escapedName":"@dcloudio%2funi-stat","scope":"@dcloudio","rawSpec":"next","saveSpec":null,"fetchSpec":"next"},"_requiredBy":["#USER","/","/@dcloudio/vue-cli-plugin-uni"],"_resolved":"https://registry.npmjs.org/@dcloudio/uni-stat/-/uni-stat-2.0.0-26920200402001.tgz","_shasum":"5f66f5dc252ac00c6064857dee8251ee51aa2391","_spec":"@dcloudio/uni-stat@next","_where":"/Users/guoshengqiang/Documents/dcloud-plugins/release/uniapp-cli","author":"","bugs":{"url":"https://github.com/dcloudio/uni-app/issues"},"bundleDependencies":false,"deprecated":false,"description":"","devDependencies":{"@babel/core":"^7.5.5","@babel/preset-env":"^7.5.5","eslint":"^6.1.0","rollup":"^1.19.3","rollup-plugin-babel":"^4.3.3","rollup-plugin-clear":"^2.0.7","rollup-plugin-commonjs":"^10.0.2","rollup-plugin-copy":"^3.1.0","rollup-plugin-eslint":"^7.0.0","rollup-plugin-json":"^4.0.0","rollup-plugin-node-resolve":"^5.2.0","rollup-plugin-replace":"^2.2.0","rollup-plugin-uglify":"^6.0.2"},"files":["dist","package.json","LICENSE"],"gitHead":"bfdbb7b3000599679ef8cb29a969e6bd447b00c7","homepage":"https://github.com/dcloudio/uni-app#readme","license":"Apache-2.0","main":"dist/index.js","name":"@dcloudio/uni-stat","repository":{"type":"git","url":"git+https://github.com/dcloudio/uni-app.git","directory":"packages/uni-stat"},"scripts":{"build":"NODE_ENV=production rollup -c rollup.config.js","dev":"NODE_ENV=development rollup -w -c rollup.config.js"},"version":"2.0.0-26920200402001"};
 
 /***/ }),
 

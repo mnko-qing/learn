@@ -21,4 +21,8 @@
 	.margin_bottom_10 {
 		margin-bottom: 10px;
 	}
+	image {
+		width: 100%;
+		height: 100%;
+	}
 </style>
