@@ -1,9 +1,9 @@
 export default [
 	{
 		swiper: [
-			'/static/products/1.png',
-			'/static/products/2.png',
-			'/static/products/3.png',
+			'/static/products/banner1.png',
+			'/static/products/banner2.png',
+			'/static/products/banner3.png',
 		],
 		sub: [{
 			title: '常用分类',
@@ -77,7 +77,7 @@ export default [
 		}],
 	},
   {
-		banner: '/static/products/4.png',
+		banner: '/static/products/banner1.png',
 		sub: [{
 			title: '休闲零食',
 			children: [
@@ -146,7 +146,7 @@ export default [
 		}],
 	},
   {
-  	banner: '/static/products/5.png',
+  	banner: '/static/products/banner2.png',
   	sub: [{
   		title: '推荐品牌',
   		children: [
@@ -201,4 +201,876 @@ export default [
   			}]
   	}],
   },
+	{
+		banner: '/static/products/banner3.png',
+		sub: [{
+			title: '热门精选',
+			children: [
+				{
+					name: '男士奢品',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '女士奢品',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '官方旗舰',
+					src: '/static/products/3.png',
+					des: ''
+				}]
+		},{
+			title: '大牌推荐',
+			children: [
+				{
+					name: '',
+					src: '/static/products/7.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/8.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/8.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/6.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/4.png',
+					des: ''
+				}]
+		},{
+			title: '家居生活',
+			children: [
+				{
+					name: '香氛家居',
+					src: '/static/products/10.png',
+					des: ''
+				}]
+		}],
+	},
+	{
+		banner: '/static/products/banner3.png',
+		sub: [{
+			title: '热门精选',
+			children: [
+				{
+					name: '好物种草',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '排行榜',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '新品上市',
+					src: '/static/products/3.png',
+					des: ''
+				}]
+		},{
+			title: '特色馆区',
+			children: [
+				{
+					name: '日本馆',
+					src: '/static/products/7.png',
+					des: ''
+				},{
+					name: '韩国馆',
+					src: '/static/products/8.png',
+					des: ''
+				},{
+					name: '美国馆',
+					src: '/static/products/8.png',
+					des: ''
+				}]
+		},{
+			title: '母婴玩具',
+			children: [
+				{
+					name: '婴儿奶粉',
+					src: '/static/products/10.png',
+					des: ''
+				},{
+					name: '婴儿尿裤',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '婴儿辅食',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '孕妇奶粉',
+					src: '/static/products/3.png',
+					des: ''
+				},{
+					name: '安全座椅',
+					src: '/static/products/4.png',
+					des: ''
+				},{
+					name: '喂养用品',
+					src: '/static/products/5.png',
+					des: ''
+				}]
+		},{
+			title: '母婴用品',
+			children: [
+				{
+					name: '婴儿奶粉',
+					src: '/static/products/10.png',
+					des: ''
+				},{
+					name: '婴儿尿裤',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '婴儿辅食',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '孕妇奶粉',
+					src: '/static/products/3.png',
+					des: ''
+				},{
+					name: '安全座椅',
+					src: '/static/products/4.png',
+					des: ''
+				},{
+					name: '喂养用品',
+					src: '/static/products/5.png',
+					des: ''
+				}],
+		}]
+	},
+	{
+		banner: '/static/products/banner2.png',
+		sub: [{
+			title: '推荐品牌',
+			children: [
+				{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/4.png',
+					des: ''
+				}]
+		},{
+			title: '运动户外',
+			children: [
+				{
+					name: '',
+					src: '/static/products/7.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/8.png',
+					des: ''
+				}]
+		},{
+			title: '钟表配饰',
+			children: [
+				{
+					name: '',
+					src: '/static/products/10.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				}]
+		}],
+	},
+	{
+		banner: '/static/products/banner2.png',
+		sub: [{
+			title: '推荐品牌',
+			children: [
+				{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/4.png',
+					des: ''
+				}]
+		},{
+			title: '运动户外',
+			children: [
+				{
+					name: '',
+					src: '/static/products/7.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/8.png',
+					des: ''
+				}]
+		},{
+			title: '钟表配饰',
+			children: [
+				{
+					name: '',
+					src: '/static/products/10.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				}]
+		}],
+	},
+	{
+		banner: '/static/products/banner2.png',
+		sub: [{
+			title: '推荐品牌',
+			children: [
+				{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/4.png',
+					des: ''
+				}]
+		},{
+			title: '运动户外',
+			children: [
+				{
+					name: '',
+					src: '/static/products/7.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/8.png',
+					des: ''
+				}]
+		},{
+			title: '钟表配饰',
+			children: [
+				{
+					name: '',
+					src: '/static/products/10.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				}]
+		}],
+	},
+	{
+		banner: '/static/products/banner2.png',
+		sub: [{
+			title: '推荐品牌',
+			children: [
+				{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/4.png',
+					des: ''
+				}]
+		},{
+			title: '运动户外',
+			children: [
+				{
+					name: '',
+					src: '/static/products/7.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/8.png',
+					des: ''
+				}]
+		},{
+			title: '钟表配饰',
+			children: [
+				{
+					name: '',
+					src: '/static/products/10.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				}]
+		}],
+	},
+	{
+		banner: '/static/products/banner2.png',
+		sub: [{
+			title: '推荐品牌',
+			children: [
+				{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/4.png',
+					des: ''
+				}]
+		},{
+			title: '运动户外',
+			children: [
+				{
+					name: '',
+					src: '/static/products/7.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/8.png',
+					des: ''
+				}]
+		},{
+			title: '钟表配饰',
+			children: [
+				{
+					name: '',
+					src: '/static/products/10.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				}]
+		}],
+	},
+	{
+		banner: '/static/products/banner2.png',
+		sub: [{
+			title: '推荐品牌',
+			children: [
+				{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/4.png',
+					des: ''
+				}]
+		},{
+			title: '运动户外',
+			children: [
+				{
+					name: '',
+					src: '/static/products/7.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/8.png',
+					des: ''
+				}]
+		},{
+			title: '钟表配饰',
+			children: [
+				{
+					name: '',
+					src: '/static/products/10.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				}]
+		}],
+	},
+	{
+		banner: '/static/products/banner2.png',
+		sub: [{
+			title: '推荐品牌',
+			children: [
+				{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/4.png',
+					des: ''
+				}]
+		},{
+			title: '运动户外',
+			children: [
+				{
+					name: '',
+					src: '/static/products/7.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/8.png',
+					des: ''
+				}]
+		},{
+			title: '钟表配饰',
+			children: [
+				{
+					name: '',
+					src: '/static/products/10.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				}]
+		}],
+	},
+	{
+		banner: '/static/products/banner2.png',
+		sub: [{
+			title: '推荐品牌',
+			children: [
+				{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/4.png',
+					des: ''
+				}]
+		},{
+			title: '运动户外',
+			children: [
+				{
+					name: '',
+					src: '/static/products/7.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/8.png',
+					des: ''
+				}]
+		},{
+			title: '钟表配饰',
+			children: [
+				{
+					name: '',
+					src: '/static/products/10.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				}]
+		}],
+	},
+	{
+		banner: '/static/products/banner2.png',
+		sub: [{
+			title: '推荐品牌',
+			children: [
+				{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/4.png',
+					des: ''
+				}]
+		},{
+			title: '运动户外',
+			children: [
+				{
+					name: '',
+					src: '/static/products/7.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/8.png',
+					des: ''
+				}]
+		},{
+			title: '钟表配饰',
+			children: [
+				{
+					name: '',
+					src: '/static/products/10.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				}]
+		}],
+	},
+	{
+		banner: '/static/products/banner2.png',
+		sub: [{
+			title: '推荐品牌',
+			children: [
+				{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/4.png',
+					des: ''
+				}]
+		},{
+			title: '运动户外',
+			children: [
+				{
+					name: '',
+					src: '/static/products/7.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/8.png',
+					des: ''
+				}]
+		},{
+			title: '钟表配饰',
+			children: [
+				{
+					name: '',
+					src: '/static/products/10.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				}]
+		}],
+	},
+	{
+		banner: '/static/products/banner2.png',
+		sub: [{
+			title: '推荐品牌',
+			children: [
+				{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/4.png',
+					des: ''
+				}]
+		},{
+			title: '运动户外',
+			children: [
+				{
+					name: '',
+					src: '/static/products/7.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/8.png',
+					des: ''
+				}]
+		},{
+			title: '钟表配饰',
+			children: [
+				{
+					name: '',
+					src: '/static/products/10.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				}]
+		}],
+	},
+	{
+		banner: '/static/products/banner2.png',
+		sub: [{
+			title: '推荐品牌',
+			children: [
+				{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/4.png',
+					des: ''
+				}]
+		},{
+			title: '运动户外',
+			children: [
+				{
+					name: '',
+					src: '/static/products/7.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/8.png',
+					des: ''
+				}]
+		},{
+			title: '钟表配饰',
+			children: [
+				{
+					name: '',
+					src: '/static/products/10.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				}]
+		}],
+	},
+	{
+		banner: '/static/products/banner2.png',
+		sub: [{
+			title: '推荐品牌',
+			children: [
+				{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/4.png',
+					des: ''
+				}]
+		},{
+			title: '运动户外',
+			children: [
+				{
+					name: '',
+					src: '/static/products/7.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/8.png',
+					des: ''
+				}]
+		},{
+			title: '钟表配饰',
+			children: [
+				{
+					name: '',
+					src: '/static/products/10.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/1.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/2.png',
+					des: ''
+				},{
+					name: '',
+					src: '/static/products/3.png',
+					des: ''
+				}]
+		}],
+	},
 ]

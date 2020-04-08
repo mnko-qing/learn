@@ -24,29 +24,29 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.margin_bottom_15.data-v-072362e9 {
+.margin_bottom_15.data-v-85af7518 {
   margin-bottom: 15px;
 }
-page .right.data-v-072362e9 {
+page .right.data-v-85af7518 {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABQklEQVR4Xu3a0Q2CQBAE0CV0o/3YCHVcI/aj3ZCY+yAhRj/IsjvD7fgtkHk3qzlgsuKfqXh+E4AaUFxAI1C8APoR1AhoBIoLaASKF0D/AhqBjBFYluXWWntnXOvoNcIb0MOv6/qc5/nBiBAKsIU3s7uZvRgRwgC+wm/NpEPIBugQVAhhAD3pnxZQIYQCXAEhHIAdIQWAGSENgBUhFYARIR2ADQECwIQAA2BBgAIwIMAB0AgUAEgEARy9gxLxfeSmCd4AZPi+mFAAdHgoAEN4GABLeAgAU/h0ALbwqQCM4dMAWMOnADCHDwdgDx8KcIXwCACqp0KhAD+2uHThwwH2CIxPhlMANgTGdwPSACLuIZx1Tuh2+KwQnvMIwKM3wrFqwAir6MmgBnj0RjhWDRhhFT0Z1ACP3gjHqgEjrKInQ/kGfAD15CZQ+AOf4gAAAABJRU5ErkJggg==);
   background-size: 100% 100%;
 }
-page .person > view.data-v-072362e9 {
+page .person > view.data-v-85af7518 {
   background-color: #fff;
 }
-page .person_head.data-v-072362e9 {
+page .person_head.data-v-85af7518 {
   height: 40px;
   padding: 0 15px;
 }
-page .person_head image.data-v-072362e9 {
+page .person_head image.data-v-85af7518 {
     width: 25px;
     height: 25px;
     margin-top: 5px;
 }
-page .person_head image.data-v-072362e9:last-child {
+page .person_head image.data-v-85af7518:last-child {
     float: right;
 }
-page .person_user.data-v-072362e9 {
+page .person_user.data-v-85af7518 {
   height: 180px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -63,38 +63,38 @@ page .person_user.data-v-072362e9 {
           align-items: center;
   position: relative;
 }
-page .person_user .avatar.data-v-072362e9 {
+page .person_user .avatar.data-v-85af7518 {
     width: 80px;
     height: 80px;
     border-radius: 50%;
 }
-page .person_user text.data-v-072362e9 {
+page .person_user text.data-v-85af7518 {
     margin: 10px 0;
     font-size: 20px;
     font-weight: 600;
     color: black;
 }
-page .person_user .note.data-v-072362e9 {
+page .person_user .note.data-v-85af7518 {
     font-size: 14px;
     color: #adadad;
 }
-page .person_user .right_arrow.data-v-072362e9 {
+page .person_user .right_arrow.data-v-85af7518 {
     position: absolute;
     right: 15px;
     top: 50px;
     width: 22px;
     height: 22px;
 }
-page uni-list.data-v-072362e9 .uni-list {
+page uni-list.data-v-85af7518 .uni-list {
   background-color: #e5e5e5;
 }
-page uni-list.data-v-072362e9 .uni-list .uni-list-item {
+page uni-list.data-v-85af7518 .uni-list .uni-list-item {
     background-color: #fff;
 }
-page uni-list.data-v-072362e9 .uni-list .uni-list-item--hover {
+page uni-list.data-v-85af7518 .uni-list .uni-list-item--hover {
     background-color: #f1f1f1 !important;
 }
-page uni-list.data-v-072362e9 .uni-list .uni-list-item__content-title {
+page uni-list.data-v-85af7518 .uni-list .uni-list-item__content-title {
     font-size: 30rpx;
 }
 

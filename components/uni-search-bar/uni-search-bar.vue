@@ -123,7 +123,7 @@
 		/* #endif */
 		flex-direction: row;
 		position: relative;
-		padding: $uni-spacing-col-base;
+		padding: 8px;
 		background-color: $uni-bg-color;
 	}
 

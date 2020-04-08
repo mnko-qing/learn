@@ -23,6 +23,12 @@
 			"style": {
 				"navigationBarTitleText": "分类"
 			}
+		},
+		{
+			"path": "pages/details/details",
+			"style": {
+				"navigationBarTitleText": "详情"
+			}
 		}
 	],
 	"globalStyle": {
@@ -58,7 +64,7 @@
 		"list": [
 			{
 				"name": "category", //模式名称
-				"path": "pages/category/category", //启动页面，必选
+				"path": "pages/details/details", //启动页面，必选
 				"query": "" //启动参数，在页面的onLoad函数里面得到
 			}
 		]

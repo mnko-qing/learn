@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/view/view",
     "pages/person/person",
-    "pages/category/category"
+    "pages/category/category",
+    "pages/details/details"
   ],
   "subPackages": [],
   "window": {
@@ -38,6 +39,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap63.json"
+  "usingComponents": {}
 }

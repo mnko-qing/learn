@@ -16,7 +16,7 @@
 			</view>
 		</view>
 		<swiper :autoplay="true" :interval="2000" :duration="500">
-			<swiper-item>
+			<swiper-item @tap="toDetails">
 				<image src="/static/banner/banner_1.png"></image>
 			</swiper-item>
 			<swiper-item>
@@ -145,6 +145,11 @@
 
 		},
 		methods: {
+			toDetails() {
+				uni.navigateTo({
+					url:'../details/details'
+				})
+			},
 			attentionSwtich() {
 				this.isAttention = !this.isAttention
 				this.attentionNumber = this.attentionNumber + (

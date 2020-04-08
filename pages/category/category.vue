@@ -84,6 +84,7 @@
 					scrollTop: 0,
           rightScroll: 0
 				},
+				loadingCategory: true,
 				currentIndex: 0,
 				currentCategoryData: {}, 
 			}
@@ -94,7 +95,9 @@
 				this.scroll.boxHeight = data.height
 			}).exec()
 			
-			this.currentCategoryData = procducts[0]
+			setTimeout( () => {
+				this.currentCategoryData = procducts[0]
+			},500)
 		},
 		methods: {
 			switchCategory(event,index) {
@@ -117,7 +120,9 @@
       },
 			requestCategoryData(index) {
         this.scroll.rightScroll = 0
-				this.currentCategoryData = procducts[index] || []
+				setTimeout( () => {
+					this.currentCategoryData = procducts[index] || []
+				},500)
 			}
 		}
 	}
@@ -136,7 +141,7 @@
 		
 		.category_content {
 			width: 100%;
-			height: calc(~'100% - 54px');
+			height: calc(~'100% - 52px');
 			display: flex;
 			& > scroll-view {
 				width: 240rpx;
@@ -144,8 +149,8 @@
 				view {
 					width: 100%;
 					text-align: center;
-					height: 80rpx;
-					line-height: 80rpx;
+					height: 100rpx;
+					line-height: 100rpx;
           color: #6b6b6b;
 				}
 			}
@@ -192,6 +197,9 @@
           }
         }
 			}
+			.right_content_loading {
+				position: relative;
+			}
 			.left_nav_bar_active {
         color: #000;
 				position: relative;
@@ -202,7 +210,7 @@
 					width: 8rpx;
 					height: 30rpx;
 					position: absolute;
-					top: 25rpx;
+					top: 35rpx;
 					left: 0;
 					background-color: #E41F19;
 				}

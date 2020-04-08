@@ -757,7 +757,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -7216,7 +7216,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -7237,14 +7237,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -7320,7 +7320,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -7746,9 +7746,9 @@ module.exports = g;
 /***/ }),
 
 /***/ 4:
-/*!*********************************************!*\
-  !*** C:/Users/30103/Desktop/uni/pages.json ***!
-  \*********************************************/
+/*!*************************************************!*\
+  !*** C:/Users/mnko_qing/Desktop/uni/pages.json ***!
+  \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7758,9 +7758,9 @@ module.exports = g;
 /***/ }),
 
 /***/ 45:
-/*!*************************************************************************!*\
-  !*** C:/Users/30103/Desktop/uni/pages/category/category_config_data.js ***!
-  \*************************************************************************/
+/*!*****************************************************************************!*\
+  !*** C:/Users/mnko_qing/Desktop/uni/pages/category/category_config_data.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7768,9 +7768,9 @@ module.exports = g;
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = [
 {
   swiper: [
-  '/static/products/1.png',
-  '/static/products/2.png',
-  '/static/products/3.png'],
+  '/static/products/banner1.png',
+  '/static/products/banner2.png',
+  '/static/products/banner3.png'],
 
   sub: [{
     title: '常用分类',
@@ -7844,7 +7844,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 {
-  banner: '/static/products/4.png',
+  banner: '/static/products/banner1.png',
   sub: [{
     title: '休闲零食',
     children: [
@@ -7913,7 +7913,879 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 {
-  banner: '/static/products/5.png',
+  banner: '/static/products/banner2.png',
+  sub: [{
+    title: '推荐品牌',
+    children: [
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/4.png',
+      des: '' }] },
+
+  {
+    title: '运动户外',
+    children: [
+    {
+      name: '',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '钟表配饰',
+    children: [
+    {
+      name: '',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/banner3.png',
+  sub: [{
+    title: '热门精选',
+    children: [
+    {
+      name: '男士奢品',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '女士奢品',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '官方旗舰',
+      src: '/static/products/3.png',
+      des: '' }] },
+
+  {
+    title: '大牌推荐',
+    children: [
+    {
+      name: '',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/6.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/4.png',
+      des: '' }] },
+
+  {
+    title: '家居生活',
+    children: [
+    {
+      name: '香氛家居',
+      src: '/static/products/10.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/banner3.png',
+  sub: [{
+    title: '热门精选',
+    children: [
+    {
+      name: '好物种草',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '排行榜',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '新品上市',
+      src: '/static/products/3.png',
+      des: '' }] },
+
+  {
+    title: '特色馆区',
+    children: [
+    {
+      name: '日本馆',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '韩国馆',
+      src: '/static/products/8.png',
+      des: '' },
+    {
+      name: '美国馆',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '母婴玩具',
+    children: [
+    {
+      name: '婴儿奶粉',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '婴儿尿裤',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '婴儿辅食',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '孕妇奶粉',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '安全座椅',
+      src: '/static/products/4.png',
+      des: '' },
+    {
+      name: '喂养用品',
+      src: '/static/products/5.png',
+      des: '' }] },
+
+  {
+    title: '母婴用品',
+    children: [
+    {
+      name: '婴儿奶粉',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '婴儿尿裤',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '婴儿辅食',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '孕妇奶粉',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '安全座椅',
+      src: '/static/products/4.png',
+      des: '' },
+    {
+      name: '喂养用品',
+      src: '/static/products/5.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/banner2.png',
+  sub: [{
+    title: '推荐品牌',
+    children: [
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/4.png',
+      des: '' }] },
+
+  {
+    title: '运动户外',
+    children: [
+    {
+      name: '',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '钟表配饰',
+    children: [
+    {
+      name: '',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/banner2.png',
+  sub: [{
+    title: '推荐品牌',
+    children: [
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/4.png',
+      des: '' }] },
+
+  {
+    title: '运动户外',
+    children: [
+    {
+      name: '',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '钟表配饰',
+    children: [
+    {
+      name: '',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/banner2.png',
+  sub: [{
+    title: '推荐品牌',
+    children: [
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/4.png',
+      des: '' }] },
+
+  {
+    title: '运动户外',
+    children: [
+    {
+      name: '',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '钟表配饰',
+    children: [
+    {
+      name: '',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/banner2.png',
+  sub: [{
+    title: '推荐品牌',
+    children: [
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/4.png',
+      des: '' }] },
+
+  {
+    title: '运动户外',
+    children: [
+    {
+      name: '',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '钟表配饰',
+    children: [
+    {
+      name: '',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/banner2.png',
+  sub: [{
+    title: '推荐品牌',
+    children: [
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/4.png',
+      des: '' }] },
+
+  {
+    title: '运动户外',
+    children: [
+    {
+      name: '',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '钟表配饰',
+    children: [
+    {
+      name: '',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/banner2.png',
+  sub: [{
+    title: '推荐品牌',
+    children: [
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/4.png',
+      des: '' }] },
+
+  {
+    title: '运动户外',
+    children: [
+    {
+      name: '',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '钟表配饰',
+    children: [
+    {
+      name: '',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/banner2.png',
+  sub: [{
+    title: '推荐品牌',
+    children: [
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/4.png',
+      des: '' }] },
+
+  {
+    title: '运动户外',
+    children: [
+    {
+      name: '',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '钟表配饰',
+    children: [
+    {
+      name: '',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/banner2.png',
+  sub: [{
+    title: '推荐品牌',
+    children: [
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/4.png',
+      des: '' }] },
+
+  {
+    title: '运动户外',
+    children: [
+    {
+      name: '',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '钟表配饰',
+    children: [
+    {
+      name: '',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/banner2.png',
+  sub: [{
+    title: '推荐品牌',
+    children: [
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/4.png',
+      des: '' }] },
+
+  {
+    title: '运动户外',
+    children: [
+    {
+      name: '',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '钟表配饰',
+    children: [
+    {
+      name: '',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/banner2.png',
+  sub: [{
+    title: '推荐品牌',
+    children: [
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/4.png',
+      des: '' }] },
+
+  {
+    title: '运动户外',
+    children: [
+    {
+      name: '',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '钟表配饰',
+    children: [
+    {
+      name: '',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/banner2.png',
+  sub: [{
+    title: '推荐品牌',
+    children: [
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/4.png',
+      des: '' }] },
+
+  {
+    title: '运动户外',
+    children: [
+    {
+      name: '',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '钟表配饰',
+    children: [
+    {
+      name: '',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/banner2.png',
+  sub: [{
+    title: '推荐品牌',
+    children: [
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/4.png',
+      des: '' }] },
+
+  {
+    title: '运动户外',
+    children: [
+    {
+      name: '',
+      src: '/static/products/7.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/8.png',
+      des: '' }] },
+
+  {
+    title: '钟表配饰',
+    children: [
+    {
+      name: '',
+      src: '/static/products/10.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/1.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/2.png',
+      des: '' },
+    {
+      name: '',
+      src: '/static/products/3.png',
+      des: '' }] }] },
+
+
+
+{
+  banner: '/static/products/banner2.png',
   sub: [{
     title: '推荐品牌',
     children: [
@@ -8867,9 +9739,9 @@ module.exports = {"_from":"@dcloudio/uni-stat@next","_id":"@dcloudio/uni-stat@2.
 /***/ }),
 
 /***/ 60:
-/*!****************************************************************!*\
-  !*** C:/Users/30103/Desktop/uni/components/uni-icons/icons.js ***!
-  \****************************************************************/
+/*!********************************************************************!*\
+  !*** C:/Users/mnko_qing/Desktop/uni/components/uni-icons/icons.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9103,21 +9975,21 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /***/ }),
 
 /***/ 7:
-/*!**************************************************************!*\
-  !*** C:/Users/30103/Desktop/uni/pages.json?{"type":"style"} ***!
-  \**************************************************************/
+/*!******************************************************************!*\
+  !*** C:/Users/mnko_qing/Desktop/uni/pages.json?{"type":"style"} ***!
+  \******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "问道" }, "pages/view/view": { "navigationBarTitleText": "发现" }, "pages/person/person": { "navigationBarTitleText": "个人中心" }, "pages/category/category": { "navigationBarTitleText": "分类" } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default = { "pages": { "pages/index/index": { "navigationBarTitleText": "问道", "usingComponents": {}, "usingAutoImportComponents": {} }, "pages/view/view": { "navigationBarTitleText": "发现", "usingComponents": {}, "usingAutoImportComponents": { "uni-search-bar": "/components/uni-search-bar/uni-search-bar", "uni-icons": "/components/uni-icons/uni-icons", "uni-drawer": "/components/uni-drawer/uni-drawer" } }, "pages/person/person": { "navigationBarTitleText": "个人中心", "usingComponents": {}, "usingAutoImportComponents": { "uni-list": "/components/uni-list/uni-list", "uni-list-item": "/components/uni-list-item/uni-list-item" } }, "pages/category/category": { "navigationBarTitleText": "分类", "usingComponents": {}, "usingAutoImportComponents": { "uni-search-bar": "/components/uni-search-bar/uni-search-bar" } }, "pages/details/details": { "navigationBarTitleText": "详情", "usingComponents": {}, "usingAutoImportComponents": {} } }, "globalStyle": { "navigationBarTextStyle": "black", "navigationBarTitleText": "uni-app", "navigationBarBackgroundColor": "#F8F8F8", "backgroundColor": "#F8F8F8" } };exports.default = _default;
 
 /***/ }),
 
 /***/ 8:
-/*!*************************************************************!*\
-  !*** C:/Users/30103/Desktop/uni/pages.json?{"type":"stat"} ***!
-  \*************************************************************/
+/*!*****************************************************************!*\
+  !*** C:/Users/mnko_qing/Desktop/uni/pages.json?{"type":"stat"} ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
