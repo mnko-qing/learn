@@ -11,26 +11,39 @@
 				<view class="update">赠好友</view>
 			</view>
 		</view>
-		<view class="details_sticky margin_bottom_10">
-			<scroll-view 
-				scroll-x 
-				class="tab_wrapper" 
-				scroll-with-animation
-				:scroll-left="100">
-				<view class="tab_item">详情</view>
-				<view class="tab_item">目录</view>
-				<view class="tab_item">评价</view>
-				<view class="tab_item">详情</view>
-				<view class="tab_item">目录</view>
-				<view class="tab_item">评价</view>
-				<view class="tab_item">目录</view>
-				<view class="tab_item">评价</view>
-				<view class="tab_item">目录</view>
-				<view class="tab_item">评价</view>
-			</scroll-view>
-		</view>
-		<view class="details_wrapper">
-			
+		<scroll-view
+			scroll-x 
+			enable-flex
+			class="tab_wrapper" 
+			:class="{'details_sticky': isFixed}"
+			scroll-with-animation>
+			<view 
+				class="tab_item"
+				:class="{'tab_item_active':currentTabIndex == index}"
+				@tap="switchTab(index)"
+				v-for="(item,index) in tabs"
+				:key="item">
+				{{item}}
+			</view>
+		</scroll-view>
+		<swiper 
+			class="tab_content"
+			:style="{'height': swiperHeight + 'px'}"
+			:duration="800"
+			:current="currentTabIndex"
+			@change="switchSwiper">
+			<swiper-item>
+				<view class="swiper_item" style="height: 1400rpx;">1</view>
+			</swiper-item>
+			<swiper-item>
+				<view class="swiper_item" style="height: 300rpx;">2</view>
+			</swiper-item>
+			<swiper-item>
+				<view class="swiper_item" style="height: 400rpx;">3</view>
+			</swiper-item>
+		</swiper>
+		<view class="link_tabbar">
+			<text>首页</text>|<text>发现</text>|<text>个人中心</text>
 		</view>
 		<view class="details_footer">
 			<view>免费</view>
@@ -43,7 +56,52 @@
 	export default {
 		data() {
 			return {
-				
+				tabs: ['详情', '目录', '评价'],
+				currentTabIndex: 0,
+				swiperHeight: 0,
+				scrollTop: 0,
+				top: 0,
+				isFixed: false
+			}
+		},
+		watch: {
+			scrollTop(newval,oldval) {
+				this.updateStickyState()
+			}
+		},
+		onPageScroll({scrollTop}) {
+			this.scrollTop = scrollTop
+		},
+		onReady() {
+			this.getStickyTop()
+		},
+		mounted() {
+			this.setSwiperHeight()
+		},
+		methods: {
+			switchTab(index) {
+				if(this.currentTabIndex !== index) {
+					this.currentTabIndex = index
+				}
+			},
+			switchSwiper(e) {
+				this.currentTabIndex = e.detail.current
+				this.setSwiperHeight()
+			},
+			setSwiperHeight() {
+				let query = uni.createSelectorQuery().in(this)
+				query.selectAll('.swiper_item').boundingClientRect( res => {
+					this.swiperHeight = res[this.currentTabIndex].height
+				}).exec()
+			},
+			updateStickyState() {
+				this.isFixed = this.scrollTop >= this.top ? true : false
+			},
+			getStickyTop() {
+				let query = uni.createSelectorQuery().in(this)
+				query.select('.tab_wrapper').boundingClientRect( res => {
+					this.top = res.top
+				}).exec()
 			}
 		}
 	}
@@ -51,7 +109,6 @@
 
 <style lang="less" scoped>
 	.details {
-		
 		.details_banner {
 			height: 480rpx;
 		}
@@ -95,29 +152,56 @@
 			}
 		}
 		.details_sticky {
-			height: 200rpx;
-			background-color: #fff;
-			position: sticky;
-			.tab_wrapper {
-				padding: 20rpx;
-				width: 100%;
-				height: 100rpx;
-				overflow: hidden;
-				white-space: nowrap;
-				::-webkit-scrollbar {
-					display: none;
-				}
-				.tab_item {
-					height: 100%;
-					min-width: 100rpx;
-					text-align: center;
-					display: inline-block;
-				}
-			} 
+			position: fixed;
+			top: 0;
+			z-index: 999999;
 		}
-		.details_wrapper {
-			height: 2000rpx;
+		.tab_wrapper {
+			width: 100%;
+			height: 80rpx;
+			line-height: 80rpx;
 			background-color: #fff;
+			border-bottom: 1px solid #dfdee3;
+			display: flex;
+			overflow: hidden;
+			white-space: nowrap;
+			::-webkit-scrollbar {
+				display: none;
+			}
+			.tab_item {
+				flex: 1;
+				min-width: 100rpx;
+				padding: 0 20rpx;
+				text-align: center;
+				display: inline-block;
+			}
+		} 
+		.tab_content {
+			background-color: #fff;
+		}
+		.tab_item_active {
+			color: #f33e54;
+			position: relative;
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				bottom: 1px;
+				left: 20rpx;
+				right: 20px;
+				height: 1px;
+				background-color: #f33e54;
+			}
+		}
+		.link_tabbar {
+			height: 100rpx;
+			margin-bottom: 100rpx;
+			display: flex;
+			justify-content: center;
+			align-items:center;
+			text {
+				padding: 0 10rpx;
+			}
 		}
 		.details_footer {
 			position: fixed;
